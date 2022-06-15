@@ -5,4 +5,5 @@ return {
     ["neoclide/coc.nvim"] = {
       branch = "release"
    },
+   ["kevinhwang91/rnvimr"] = {},
 }

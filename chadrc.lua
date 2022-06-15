@@ -3,7 +3,7 @@ local M = {}
 M.mappings = require "custom.mappings"
 
 M.ui = {
-   theme = "gatekeeper",
+   theme = "gruvbox_light",
 }
 
 M.plugins = {

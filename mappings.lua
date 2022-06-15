@@ -1,12 +1,60 @@
 local M = {}
 
+
+
+
+M.paneManagement = {
+  i = {
+    -- Switch Pane
+    ["<C-S-Left>"]  = {"<ESC><C-w>h<CR>","Go to Left Pane"},
+    ["<C-S-Right>"] = {"<ESC><C-w>l<CR>","Got to Right Pane"},
+    ["<C-S-Up>"]    = {"<ESC><C-w>k<CR>","Go to Top Pane"},
+    ["<C-S-Down>"]  = {"<ESC><C-w>j<CR>","Go to bottom Pane"},
+  },
+  n = {
+    --Resize Pane
+    ["<C-A-Left>"] = {":vertical resize +5<CR>", "Increase left"},
+    ["<C-A-Right>"] = {":vertical resize -5<CR>","Reduce right"},
+    ["<C-A-Up>"] = {":resize -5<CR>","Decrease Up"},
+    ["<C-A-Down>"] = {":resize +5<CR>","Increase Down"},
+  },
+}
+
 M.telescope = {
   n = {
-      ["<leader>tl"] = {
-        "<cmd> Telescope live_grep<CR>",
-        "Telescope live grep"
-      },
+   ["<C-p>"] = {":Telescope find_files<CR>","Telescope find files"},
+   ["<C-g>"] = {":Telescope live_grep<CR>","Telescope Live grep"},
+   ["<C-f>"] = {":Telescope grep_string<CR>","Telescope grep string"},
+   ["<C-A-p>"] = {":Telescope buffers<CR>","Show Open Buffers"},
   },
+
+  i ={
+   ["<C-p>"] = {"<ESC>:Telescope find_files<CR>","Telescope find files"},
+  }
+}
+
+M.vscodify = {
+  i = {
+    ["<A-Down>"] = {"<ESC>:m +1<CR>a","Move current line down"},
+    ["<A-Up>"]   = {"<ESC>:m -2<CR>a","Move current line up"},
+    ["<C-s>"] = {"<ESC>:wa<CR>","Save All Files"},
+    ["<C-z>"] = {"<ESC>u<CR>","Undo"},
+    ["<C-y>"] = {"<ESC>:redo<CR>","Redo"},
+    ["<C-x>"] = {"<ESC>dd<CR>gi","Cut line"},
+    ["<C-d>"] = {"<ESC>yyP<CR>I","Duplicate line"},
+    ["<C-c>"] = {"<ESC>yy<CR>I","Copy line"},
+    ["<C-v>"]  = {"<C-S-v>","Paste"},
+  },
+  n = {
+   ["<A-Down>"] = {":m +1<CR>","Move current line down"},
+   ["<A-Up>"]   = {":m -2<CR>","Move current line up"},
+   ["<C-s>"]    = {":wa<CR>","Save All Files"},
+   ["<C-z>"]    = {":undo<CR>","Undo"},
+   ["<C-y>"]     = {":redo<CR>","Redo"},
+   ["<C-x>"]    = {"dd","Cut line"},
+   ["<C-c>"]    = {"yy<CR>","Copy line"},
+   ["<C-d>"]    = {"yyP<CR>i","Duplicate line"},
+  }
 }
 
 M.lsp = {
@@ -19,7 +67,7 @@ M.lsp = {
          "Code Actions",
       },
       ["<leader>ld"] = {
-        "<cmd>Telescope lsp_document_diagnostics<CR>",
+        "<cmd>Telescope diagnostics<CR>",
         "Document Diagnostics",
       },
       ["<leader>lw"] = {

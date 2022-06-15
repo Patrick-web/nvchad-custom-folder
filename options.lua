@@ -1,0 +1,3 @@
+-- return {
+--   vim.opt.wrap = false
+-- }
