@@ -11,9 +11,6 @@ M.plugs = {
 }
 
 M.overides = {
-  i = {
-    ["<leader>e"] = {"<ESC>:NvimTreeToggle<CR>","Toggle File Tree"}
-  },
   n = {
     ["<leader>e"] = {":NvimTreeToggle<CR>","Toggle File Tree"}
   }
