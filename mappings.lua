@@ -1,6 +1,24 @@
 local M = {}
 
+M.plugs = {
+  i = {
+    ["<C-S-r>"] = {"<ESC>:RnvimrToggle<CR>"}
+  },
+  n = {
+    ["<C-S-r>"] = {"<ESC>:RnvimrToggle<CR>"}
+  }
 
+}
+
+M.overides = {
+  i = {
+    ["<leader>e"] = {"<ESC>:NvimTreeToggle<CR>","Toggle File Tree"}
+  },
+  n = {
+    ["<leader>e"] = {":NvimTreeToggle<CR>","Toggle File Tree"}
+  }
+
+}
 
 
 M.paneManagement = {
@@ -17,6 +35,12 @@ M.paneManagement = {
     ["<C-A-Right>"] = {":vertical resize -5<CR>","Reduce right"},
     ["<C-A-Up>"] = {":resize -5<CR>","Decrease Up"},
     ["<C-A-Down>"] = {":resize +5<CR>","Increase Down"},
+
+    ["<C-S-Left>"]  = {"<ESC><C-w>h<CR>","Go to Left Pane"},
+    ["<C-S-Right>"] = {"<ESC><C-w>l<CR>","Got to Right Pane"},
+    ["<C-S-Up>"]    = {"<ESC><C-w>k<CR>","Go to Top Pane"},
+    ["<C-S-Down>"]  = {"<ESC><C-w>j<CR>","Go to bottom Pane"},
+
   },
 }
 
