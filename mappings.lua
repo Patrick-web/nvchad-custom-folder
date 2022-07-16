@@ -81,6 +81,14 @@ M.vscodify = {
 M.lsp = {
    -- See `<cmd> :help vim.lsp.*` for documentation on any of the below functions
    n = {
+      ["gh"] = {
+        "<cmd>lua vim.lsp.buf.hover()<CR>",
+        "Hover"
+      },
+      ["gl"] = {
+        "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>",
+        "Show inline diagnostics"
+      },
       ["<leader>la"] = {
          function()
            require'telescope.builtin'.code_actions{}
