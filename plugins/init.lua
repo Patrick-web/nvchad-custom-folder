@@ -8,5 +8,6 @@ return {
          require("custom.plugins.null-ls").setup()
       end,
    },
-   ["MunifTanjim/prettier.nvim"] = {}
+   ["MunifTanjim/prettier.nvim"] = {},
+   ["wakatime/vim-wakatime.nvim"] = {}
 }
