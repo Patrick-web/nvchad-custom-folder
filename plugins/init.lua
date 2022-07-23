@@ -9,5 +9,8 @@ return {
       end,
    },
    ["MunifTanjim/prettier.nvim"] = {},
-   ["wakatime/vim-wakatime.nvim"] = {}
+   ["wakatime/vim-wakatime"] = {},
+   ["simrat39/symbols-outline.nvim"] = {},
+   ["nvim-telescope/telescope-ui-select.nvim"] = {},
+   ["windwp/nvim-spectre"] = {},
 }

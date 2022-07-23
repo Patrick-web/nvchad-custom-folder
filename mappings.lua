@@ -1,18 +1,16 @@
 local M = {}
 
 M.plugs = {
-  i = {
-    ["<C-S-r>"] = {"<ESC>:RnvimrToggle<CR>"}
-  },
   n = {
-    ["<C-S-r>"] = {"<ESC>:RnvimrToggle<CR>"}
-  }
-
+    ["<leader>o"] = {":SymbolsOutline<CR>","Symbols"},
+    ["<leader>F"] = {":lua require('spectre').open()<CR>","Find and Replace"}
+    -- ["<leader>r"] = {":RnvimrToggle<CR>","Toggle Ranger"},
+  },
 }
 
 M.overides = {
   n = {
-    ["<leader>e"] = {":NvimTreeToggle<CR>","Toggle File Tree"}
+    ["<leader>e"] = {":NvimTreeToggle<CR>","Toggle File Tree"},
   }
 
 }
@@ -90,9 +88,7 @@ M.lsp = {
         "Show inline diagnostics"
       },
       ["<leader>la"] = {
-         function()
-           require'telescope.builtin'.code_actions{}
-         end,
+        "<cmd>lua vim.lsp.buf.code_action()<CR>",
          "Code Actions",
       },
       ["<leader>ld"] = {
