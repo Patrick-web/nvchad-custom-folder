@@ -6,22 +6,7 @@ require("telescope").setup {
   extensions = {
     ["ui-select"] = {
       require("telescope.themes").get_dropdown {
-        -- even more opts
       }
-
-      -- pseudo code / specification for writing custom displays, like the one
-      -- for "codeactions"
-      -- specific_opts = {
-      --   [kind] = {
-      --     make_indexed = function(items) -> indexed_items, width,
-      --     make_displayer = function(widths) -> displayer
-      --     make_display = function(displayer) -> function(e)
-      --     make_ordinal = function(e) -> string
-      --   },
-      --   -- for example to disable the custom builtin "codeactions" display
-      --      do the following
-      --   codeactions = false,
-      -- }
     }
   }
 }
@@ -29,4 +14,43 @@ require("telescope").setup {
 -- load_extension, somewhere after setup function:
 require("telescope").load_extension("ui-select")
 end
+
+M.alpha_dashboard = {disable = false}
+
+M.nvimtree = {
+   git = {
+      enable = true,
+   },
+   view = {
+      side = "left",
+      width = 20,
+   },
+}
+
+M.mason = {
+  ensure_installed = {
+        -- lua stuff
+        "lua-language-server",
+        "stylua",
+
+        -- web dev
+        "css-lsp",
+        "html-lsp",
+        "typescript-language-server",
+        "vue-language-server",
+        "deno",
+        "emmet-ls",
+        "json-lsp",
+        --compiled languages
+        "jdtls",
+        "gopls",
+        "rust-analyzer",
+        "clangd",
+        -- shell
+        "shfmt",
+        "shellcheck",
+  },
+}
+
+
 return M

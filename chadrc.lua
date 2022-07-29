@@ -9,14 +9,18 @@ M.ui = {
 }
 
 M.plugins = {
-   options = {
-      lspconfig = {
-         setup_lspconf = "custom.plugins.lspconfig",
-      },
-   },
    user = require "custom.plugins",
    override ={
-      ["nvim-telescope/telescope.nvim"]  = pluginConfs.telescope
+      ["nvim-telescope/telescope.nvim"]  = pluginConfs.telescope,
+      ["kyazdani42/nvim-tree.lua"] = pluginConfs.nvimtree,
+      ["williamboman/mason"] = pluginConfs.mason,
+
+      -- ["neovim/nvim-lspconfig"] = {
+      -- config = function()
+      --   require "plugins.configs.lspconfig"
+      --   require "custom.plugins.lspconfig"
+      -- end,
+    -- },
    }
 }
 

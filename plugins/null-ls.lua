@@ -39,10 +39,18 @@ prettier.setup({
   vue_indent_script_and_style = false,
 })
 
+
+
+local b = null_ls.builtins
+
+local sources = {
+  b.formatting.prettier
+}
 local M = {}
 
 M.setup = function()
    null_ls.setup {
+    sources = sources,
   on_attach = function(client, bufnr)
     if client.resolved_capabilities.document_formatting then
       vim.cmd("nnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.formatting()<CR>")
