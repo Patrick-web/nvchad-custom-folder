@@ -6,6 +6,7 @@ M.mappings = require "custom.mappings"
 
 M.ui = {
    theme = "aquarium",
+   transparency = true,
 }
 
 M.plugins = {

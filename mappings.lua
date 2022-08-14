@@ -67,7 +67,7 @@ M.vscodify = {
   n = {
    ["<A-Down>"] = {":m +1<CR>","Move current line down"},
    ["<A-Up>"]   = {":m -2<CR>","Move current line up"},
-   ["<C-s>"]    = {":wa<CR>","Save All Files"},
+   ["<C-s>"]    = {":lua vim.lsp.buf.formatting_sync(nil,5000)<CR>:wa<CR>","Save All Files"},
    ["<C-z>"]    = {":undo<CR>","Undo"},
    ["<C-y>"]     = {":redo<CR>","Redo"},
    ["<C-x>"]    = {"dd","Cut line"},
@@ -100,9 +100,7 @@ M.lsp = {
         "Workspace Diagnostics",
       },
       ["<leader>lf"] = {
-         function()
-            vim.lsp.buf.formatting()
-         end,
+         "<cmd>lua vim.lsp.buf.formatting_sync(nil,5000)<CR>",
         "Format File",
       },
       ["<leader>lj"] = {
