@@ -1,5 +1,6 @@
 -- custom/plugins/init.lua
 return {
+  ["github/copilot.vim"] = {},
    ["jose-elias-alvarez/null-ls.nvim"] = {
       after = "nvim-lspconfig",
       config = function()
@@ -19,20 +20,26 @@ return {
       require "custom.plugins.lspconfig"
     end,
   },
+  ["akinsho/flutter-tools.nvim"] = {
+    requires = "nvim-lua/plenary.nvim",
+    config = function ()
+      require("flutter-tools").setup{} -- use defaults
+    end
+  },
   ["williamboman/nvim-lsp-installer"] = {
     ensure_installed = {
         "sumneko_lua",
-  "rust_analyzer",
-  "tsserver",
-  "jdtls",
-  "jsonls",
-  "volar",
-  "cssls",
-  "tailwindcss",
-  "gopls",
-  "emmet_ls",
-  "eslint",
-  "clangd",
+        "rust_analyzer",
+        "tsserver",
+        "jdtls",
+        "volar",
+        "cssls",
+        "tailwindcss",
+        "gopls",
+        "emmet_ls",
+        "eslint",
+        "clangd",
+        -- "dartls"
     }
   }
 }

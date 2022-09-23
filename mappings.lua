@@ -41,6 +41,8 @@ M.paneManagement = {
 
 M.telescope = {
   n = {
+   ["<leader>ts"] = {":Telescope lsp_document_symbols<CR>","Telescope symbols"},
+   ["<leader>tf"] = {":Telescope live_grep<CR>","Telescope live_grep"},
    ["<C-p>"] = {":Telescope find_files<CR>","Telescope find files"},
    ["<C-g>"] = {":Telescope live_grep<CR>","Telescope Live grep"},
    ["<C-f>"] = {":Telescope grep_string<CR>","Telescope grep string"},
@@ -82,6 +84,14 @@ M.lsp = {
       ["gh"] = {
         "<cmd>lua vim.lsp.buf.hover()<CR>",
         "Hover"
+      },
+      ["<leader>lts"] = {
+        "<cmd>lua vim.diagnostic.show()<CR>",
+        "Show diagnostics"
+      },
+      ["<leader>lth"] = {
+        "<cmd>lua vim.diagnostic.hide()<CR>",
+        "Hide diagnostics"
       },
       ["gl"] = {
         "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>",

@@ -30,7 +30,6 @@ local servers = {
   "rust_analyzer",
   "tsserver",
   "jdtls",
-  "jsonls",
   "volar",
   "cssls",
   "tailwindcss",
