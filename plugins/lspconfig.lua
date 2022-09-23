@@ -29,14 +29,14 @@ local servers = {
   "sumneko_lua",
   "rust_analyzer",
   "tsserver",
-  "jdtls",
-  "volar",
-  "cssls",
-  "tailwindcss",
+  -- "jdtls",
+  -- "volar",
+  -- "cssls",
+  -- "tailwindcss",
   "gopls",
-  "emmet_ls",
-  "eslint",
-  "clangd",
+  -- "emmet_ls",
+  -- "eslint",
+  -- "clangd",
 }
 
 for _, lsp in ipairs(servers) do

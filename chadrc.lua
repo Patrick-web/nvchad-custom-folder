@@ -15,13 +15,12 @@ M.plugins = {
       ["nvim-telescope/telescope.nvim"]  = pluginConfs.telescope,
       ["kyazdani42/nvim-tree.lua"] = pluginConfs.nvimtree,
       ["williamboman/mason"] = pluginConfs.mason,
-
-      -- ["neovim/nvim-lspconfig"] = {
-      -- config = function()
-      --   require "plugins.configs.lspconfig"
-      --   require "custom.plugins.lspconfig"
-      -- end,
-    -- },
+      ["neovim/nvim-lspconfig"] = {
+      config = function()
+        require "plugins.configs.lspconfig"
+        require "custom.plugins.lspconfig"
+      end,
+    },
    }
 }
 
