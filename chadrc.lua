@@ -5,8 +5,9 @@ local M = {}
 M.mappings = require "custom.mappings"
 
 M.ui = {
-   theme = "aquarium",
+   theme = "nightfox",
    transparency = false,
+    undofile = true,
 }
 
 M.plugins = {
