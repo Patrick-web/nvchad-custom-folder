@@ -1,6 +1,5 @@
 -- custom/plugins/init.lua
 return {
-  ["github/copilot.vim"] = {},
    ["jose-elias-alvarez/null-ls.nvim"] = {
       after = "nvim-lspconfig",
       config = function()
